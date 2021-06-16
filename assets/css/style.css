@@ -1,0 +1,63 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
+@import url("./reset.css");
+@import url("./normalize.css");
+@import url("./grid.css");
+
+:root {
+  --color01: #e6203a;
+  --color011: #6c1217;
+  --color02: #f3f5f7;
+  --color022: #010101;
+  --font1: "Inter", sans-serif;
+  --font2: "Source Serif Pro", "Times New Roman", serif;
+}
+
+body {
+  height: 100%;
+}
+
+header {
+  font-family: var(--font1);
+  width: 100%;
+  height: 4rem;
+  color: var(--color02);
+  background-color: var(--color022);
+}
+
+header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  font-size: 2.5rem;
+  line-height: 4rem;
+}
+
+header .right {
+  margin-right: 0;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 20px;
+}
+
+header nav ul li a {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: var(--color02);
+}
+
+header nav ul li a.ativo::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color02);
+}
