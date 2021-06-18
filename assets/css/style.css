@@ -192,3 +192,132 @@ section.noRow div.seta.right {
 section.noRow div.seta.right:hover {
   border-left: 2rem solid var(--color01);
 }
+/* Cadastro */
+
+.w100 {
+  width: 95%;
+}
+
+.w50 {
+  width: 45%;
+}
+
+section.container form {
+  margin: 0 auto;
+  border-top: 0.25rem solid var(--color02);
+  padding: 20px 0;
+}
+
+section.container form input,
+select {
+  height: 2.5rem;
+  margin: 10px;
+  background-color: transparent;
+  border: 0.15rem solid var(--color011);
+  padding-left: 0.5rem;
+  color: white;
+}
+
+section.container form input:focus,
+select:focus {
+  outline: none !important;
+  border-color: var(--color01);
+  box-shadow: 0 0 10px var(--color01);
+}
+
+section.container form input[type="file"] {
+  background-color: white;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  opacity: 0;
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+
+section.container form label p {
+  position: relative;
+  height: 2.5rem;
+  background-color: none;
+  border: 0.15rem solid var(--color011);
+  margin: 10px;
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+
+section.container form label p i {
+  position: absolute;
+  top: 25%;
+  right: 0.5rem;
+}
+
+section.container form label p:hover,
+section.container form input[type="submit"]:hover {
+  outline: none !important;
+  border-color: var(--color01);
+  box-shadow: 0 0 10px var(--color01);
+}
+
+section.container form input::placeholder,
+section.container form label p,
+select {
+  font-family: var(--font2);
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  font-size: 1.25rem;
+  line-height: 2.2rem;
+}
+
+section.container form input[type="submit"] {
+  font-family: var(--font2);
+  background-color: transparent;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+section.container form input[type="submit"]:hover {
+  background: linear-gradient(271deg, #e6203a, #6c1217);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
