@@ -18,6 +18,61 @@ body {
   background-color: black;
 }
 
+.toast {
+  display: inline-block;
+  padding: 0 1rem;
+  width: 30%;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  margin-right: 0;
+  animation: toast 1s;
+  color: white;
+  transition: 0.5s;
+}
+
+.toast::after {
+  content: "";
+  position: absolute;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  left: 1rem;
+  top: 100%;
+}
+
+@keyframes toast {
+  0% {
+    top: -20rem;
+    opacity: 0;
+  }
+
+  100% {
+    top: 1rem;
+  }
+}
+
+.sucesso {
+  background-color: #4ed964;
+  filter: drop-shadow(0 0 4px #4ed96496);
+}
+
+.sucesso::after {
+  border-top: 1rem solid #4ed964;
+}
+
+.falha {
+  background-color: #ff3a31;
+  filter: drop-shadow(0 0 4px #ff3a3196);
+}
+
+.falha::after {
+  border-top: 1rem solid #ff3a31;
+}
+
 /* header */
 
 header {
@@ -30,13 +85,13 @@ header {
 }
 
 header .container {
+  padding: 0.25rem 0;
   justify-content: space-between;
   align-items: center;
 }
 
-header h2 {
-  font-size: 2.5rem;
-  line-height: 4rem;
+header img {
+  filter: drop-shadow(0 0 2px var(--color011));
 }
 
 header .right {
@@ -80,6 +135,7 @@ h1 {
 .lutadores {
   text-align: center;
   margin: 2rem auto;
+  margin-bottom: 4rem;
 }
 
 .lutadores .container {
@@ -122,7 +178,7 @@ h1 {
 }
 
 .lutadores section.noRow .lutador img {
-  filter: drop-shadow(0 0 2px var(--color022));
+  box-shadow: 0 0 6px var(--color01);
   background-color: var(--color022);
   width: 5rem;
   height: 5rem;
@@ -202,9 +258,16 @@ section.noRow div.seta.right:hover {
   width: 45%;
 }
 
+section.cadastro {
+  text-align: center;
+  margin: 2rem auto;
+  margin-bottom: 4rem;
+}
+
 section.container form {
   margin: 0 auto;
   border-top: 0.25rem solid var(--color02);
+  border-bottom: 0.25rem solid var(--color02);
   padding: 20px 0;
 }
 
@@ -237,6 +300,7 @@ section.container form input[type="file"] {
 }
 
 section.container form label p {
+  text-align: left;
   position: relative;
   height: 2.5rem;
   background-color: none;
@@ -250,6 +314,18 @@ section.container form label p i {
   position: absolute;
   top: 25%;
   right: 0.5rem;
+}
+
+#miniImg {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 100%;
+  border: 0.15rem solid var(--color011);
+  box-shadow: 0 0 4px var(--color01);
+  position: absolute;
+  top: 10%;
+  right: 0.5rem;
+  overflow: hidden;
 }
 
 section.container form label p:hover,
@@ -320,4 +396,38 @@ section.container form input[type="submit"]:hover {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* footer */
+
+footer {
+  font-family: (--font1);
+  background-color: var(--color01);
+  border-top: 0.4rem solid var(--color011);
+  height: auto;
+}
+
+footer .container div {
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer .container a {
+  font-size: 2rem;
+  line-height: 4rem;
+  padding: 1.2rem;
+  color: var(--color02);
+  filter: drop-shadow(0 0 4px var(--color011));
+}
+
+footer .container a:hover {
+  opacity: 0.5;
+}
+
+footer .container p {
+  font-family: var(--font2);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color022);
+  margin-bottom: 0.5rem;
 }
