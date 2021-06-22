@@ -158,7 +158,8 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
 }
-.titulos:hover {
+.titulos:hover,
+.titulos.selecionado {
   background-color: var(--color01);
 }
 

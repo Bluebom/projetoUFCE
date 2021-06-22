@@ -16,12 +16,12 @@ require_once './config.php';
   <header>
     <section class="container">
       <div class="grid-2">
-        <a href="home"><img src="../assets/image/logo.png" alt="logo do site" width="50" height="50"></a>
+        <a href="<?= INCLUD_PATH ?>home?categoria=mpesado"><img src="../assets/image/logo.png" alt="logo do site" width="50" height="50"></a>
       </div>
       <div class="right grid-4">
         <nav>
           <ul>
-            <li><a href="home" <?php if (isset($_GET['url'])) if ($_GET['url'] == 'home') echo 'class="ativo"'; ?>>Home</a></li>
+            <li><a href="<?= INCLUD_PATH ?>home?categoria=mpesado" <?php if (isset($_GET['url'])) if ($_GET['url'] == 'home') echo 'class="ativo"'; ?>>Home</a></li>
             <li><a href="cadastro" <?php if (isset($_GET['url'])) if ($_GET['url'] == 'cadastro') echo 'class="ativo"'; ?>>Cadastro</a></li>
           </ul>
         </nav>

@@ -4,7 +4,7 @@ const fileLabel = document.getElementById('fileLabel')
 let file = document.getElementById('file')
 
 file.addEventListener('change', e => {
-  fileLabel.innerHTML = file.value.split("\\")[2]+'<img src="#" id="miniImg">'
+  fileLabel.innerHTML = file.value.split("\\")[2] + '<img src="#" id="miniImg">'
   let reader = new FileReader()
   reader.onload = () => {
     document.getElementById('miniImg').src = reader.result
@@ -15,11 +15,11 @@ file.addEventListener('change', e => {
 
 // deletando toast
 const toast = document.querySelector('.toast')
-setInterval(() =>{
+setInterval(() => {
   toast.style.right = '-30%';
 }, 2500);
 
-setInterval(() =>{
-  toast.remove();
-}, 3500);
+// setInterval(() =>{
+//   toast.remove();
+// }, 3500);
 
