@@ -19,7 +19,7 @@ body {
 }
 
 .toast {
-  display: inline-block;
+  display: none;
   padding: 0 1rem;
   width: 30%;
   height: 4rem;
@@ -159,6 +159,15 @@ h1 {
   transition: 0.3s;
 }
 .titulos:hover,
+.lutadores section.noRow .lutador:hover {
+  background: linear-gradient(271deg, var(--color01), var(--color011));
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
 .titulos.selecionado {
   background-color: var(--color01);
 }
@@ -172,10 +181,6 @@ h1 {
   text-align: left;
   position: relative;
   transition: 0.3s;
-}
-
-.lutadores section.noRow .lutador:hover {
-  background-color: var(--color01);
 }
 
 .lutadores section.noRow .lutador img {
@@ -195,14 +200,6 @@ h1 {
   padding: 10px 20px;
   transition: 0.25s;
   color: var(--color02);
-}
-
-.lutadores section.noRow .lutador:hover article {
-  color: var(--color022);
-}
-
-.lutadores section.noRow .lutador:hover hr {
-  color: var(--color022);
 }
 
 .lutadores section.noRow .lutador article h4 {
@@ -431,4 +428,154 @@ footer .container p {
   line-height: 1.5rem;
   color: var(--color022);
   margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 980px) {
+  :root {
+    --dWidth: 768px;
+    --qCols: 16;
+    --margin: 20px;
+  }
+
+  .toast {
+    width: 60%;
+  }
+
+  footer .form_social {
+    width: 60%;
+  }
+
+  .lutadores .titulos {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+
+  .lutadores section.noRow .lutador article {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .lutadores section.noRow .lutador article h4 {
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+  }
+  .lutadores section.noRow .lutador article p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  /* cadastro */
+
+  form.form_cad {
+    width: 60%;
+    padding: 0 10px;
+  }
+
+  section.container form.form_cad label p {
+    margin-left: 2.4%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.container.cadastro {
+    width: 100%;
+  }
+  form.form_cad {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  header .container {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  footer .container {
+    width: 100%;
+  }
+
+  .lutadores > .container {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .lutadores .titulos {
+    width: 50%;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+
+  .lutador {
+    width: 80%;
+  }
+
+  .lutadores section.noRow .lutador img {
+    width: 3.5rem;
+    height: 3.5rem;
+    left: 10%;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .toast {
+    width: 90%;
+  }
+  .w50 {
+    width: 90%;
+  }
+  .w100 {
+    width: 90%;
+  }
+
+  section.container form.form_cad label p {
+    margin-left: 4.5%;
+  }
+
+  footer .form_social {
+    width: 80%;
+  }
+
+  .lutadores > .container {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .lutadores .titulos {
+    width: 80%;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+
+  .lutador {
+    width: 87%;
+  }
+
+  .lutadores section.noRow .lutador img {
+    width: 3rem;
+    height: 3rem;
+    left: 5%;
+    top: 30%;
+  }
+
+  section.noRow div.seta.left {
+    left: -4.6rem;
+    border-top: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid transparent;
+    border-right: 1.5rem solid var(--color02);
+  }
+  section.noRow div.seta.left:hover {
+    border-right: 1.5rem solid var(--color01);
+  }
+
+  section.noRow div.seta.right {
+    right: -4.6rem;
+    border-top: 1.5rem solid transparent;
+    border-bottom: 1.5rem solid transparent;
+    border-left: 1.5rem solid var(--color02);
+  }
+
+  section.noRow div.seta.right:hover {
+    border-left: 1.5rem solid var(--color01);
+  }
 }

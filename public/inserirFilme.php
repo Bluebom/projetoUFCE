@@ -13,9 +13,9 @@ if (isset($_POST['acao'])) {
   $derrotas = $_POST['derrotas'];
   $empates = $_POST['empates'];
 
-  if ($nome == '' || $sexo == '' || $idade == '' || $altura == '' || $peso == '' || $nacionalidade  == '' || $img == '' || $vitorias == '' || $derrotas == '' || $empates == '') header("Location: cadastro?msg=Algum campo não foi preenchido");
-  if (Painel::imagemValida($img) == false) header("Location: cadastro?msg=Essa imagem não é válida");
-  if (Painel::lutadorExiste($nome)) header("Location: cadastro?msg=Esse lutador já foi cadastrado");
+  if ($nome == '' || $sexo == '' || $idade == '' || $altura == '' || $peso == '' || $nacionalidade  == '' || $img == '' || $vitorias == '' || $derrotas == '' || $empates == '') header("Location: cadastro?msg=falha");
+  if (Painel::imagemValida($img) == false) header("Location: cadastro?msg=falha");
+  if (Painel::lutadorExiste($nome)) header("Location: cadastro?msg=falha");
   else {
     $img = Painel::uploadFile($img);
     if (Painel::adicionarLutador($nome, $sexo, $idade, $altura, $peso, $nacionalidade, $img, $vitorias, $derrotas, $empates)) header("Location: cadastro?msg=sucesso");

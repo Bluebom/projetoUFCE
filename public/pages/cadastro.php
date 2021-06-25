@@ -1,13 +1,12 @@
 <?php
-if (isset($_GET['msg']))
-  if ($_GET['msg'] == 'sucesso')
-    echo '<p class="toast sucesso"><i class="fas fa-check"></i> Lutador cadastrado!</p>';
-  elseif ($_GET['msg'] == 'falha')
-    echo '<p class="toast falha"><i class="fas fa-times"></i> Falha ao cadastrar!</p>';
+if (isset($_GET['msg'])) : ?>
+  <p class=" <? if ($_GET['msg'] == 'sucesso') echo 'sucesso'; ?> toast"><i class="fas fa-check"></i> Lutador cadastrado!</p>
+  <p class="<? if ($_GET['msg'] == 'falha') echo 'falha'; ?> toast"><i class="fas fa-times"></i> Falha ao cadastrar!</p>;
+<? endif ?>
 ?>
 <h1>Cadastro de Lutadores</h1>
 <section class="container cadastro">
-  <form action="inserirFilme.php" method="POST" enctype=multipart/form-data class="grid-8">
+  <form action="inserirFilme.php" method="POST" enctype=multipart/form-data class="grid-8 form_cad">
     <input type="text" name="nome" class="w50" placeholder="Nome" required>
     <select name="sexo" class="w50" required>
       <option value="" selected disabled hidden>Sexo</option>

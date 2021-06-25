@@ -90,3 +90,19 @@
 .grid-1-3 {
   width: calc(var(--dWidth) / 3 - var(--margin));
 }
+
+@media screen and (max-width: 980px) {
+  :root {
+    --dWidth: 768px;
+    --qCols: 16;
+    --margin: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --dWidth: 742px;
+    --qCols: 16;
+    --margin: 20px;
+  }
+}

@@ -15,11 +15,12 @@ file.addEventListener('change', e => {
 
 // deletando toast
 const toast = document.querySelector('.toast')
-setInterval(() => {
-  toast.style.right = '-30%';
-}, 2500);
+if(toast.classList.contains('sucesso') || toast.classList.contains('falha')){
+  toast.style.display = 'inline-block';
+  setInterval(() =>{
+    toast.style.right = '-90%';
+  }, 3000);
+}
 
-// setInterval(() =>{
-//   toast.remove();
-// }, 3500);
+
 
