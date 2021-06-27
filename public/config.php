@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Sao_Paulo');
+
 $autoload = function ($class) {
   include("../assets/class/$class.php");
 };

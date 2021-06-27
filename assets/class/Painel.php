@@ -3,7 +3,7 @@ require_once 'MySQL.php';
 class Painel extends MySQL
 {
 
-  public static function selecionarPorCategoria($table, $categoria, $page = null, $perPage = null)
+  public static function selecionarPorCategoria($table, $categoria = 'mpesado', $page = null, $perPage = null)
   {
     $page = ($page - 1) * $perPage;
     if ($categoria == 'leve') {
@@ -74,5 +74,12 @@ class Painel extends MySQL
       return true;
     else
       return false;
+  }
+
+  public static function getIdade($data)
+  {
+    $data = explode('/', $data);
+    $data = date('Y') - $data[2];
+    return $data;
   }
 }

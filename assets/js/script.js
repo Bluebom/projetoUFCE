@@ -13,14 +13,34 @@ file.addEventListener('change', e => {
   console.log()
 })
 
-// deletando toast
-const toast = document.querySelector('.toast')
-if(toast.classList.contains('sucesso') || toast.classList.contains('falha')){
-  toast.style.display = 'inline-block';
-  setInterval(() =>{
-    toast.style.right = '-90%';
-  }, 3000);
-}
+// mascara para data de nascimento
+let start = 0;
+let end = 0;
+document.querySelector('#dateInput').addEventListener('input', () => {
+  const campo = document.querySelector('#dateInput');  
+  campo.maxLength = 10;
+  campo.value = campo.value.replace(/[^0-9/]/g, '');
+  console.log(campo.maxLength);
+  if(campo.textLength == 2 && start == 0){
+    campo.value += '/';
+    start = 1;
+  }
+  else if(campo.textLength < 2){
+    start = 0;
+  }
+
+  if(campo.textLength == 5 && end == 0){
+    campo.value += '/';
+    end = 1;
+  }
+  else if(campo.textLength < 5){
+    end = 0;
+  }
+})
+
+
+
+
 
 
 
